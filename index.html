@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Video Wedding &amp; Event Invitations</title>
+<meta name="theme-color" content="#8b1a1a">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2b1a14;--muted:#7a6358;--pri:#8b1a1a;--acc:#c9972b;--line:#ecd9b6;--bg:#fff8ec;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,sans-serif;font-size:16px;line-height:1.5}
+[hidden]{display:none!important}
+button,input,select,textarea{font:inherit;color:inherit}
+header{background:linear-gradient(135deg,#8b1a1a,#5e0f12);color:#fff3d6;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;position:sticky;top:0;z-index:5}
+header h1{margin:0;font-family:"Playfair Display",Georgia,serif;font-size:20px;cursor:pointer}
+.wab{background:#25d366;color:#fff;border:0;border-radius:99px;padding:8px 14px;font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap}
+.wrap{max-width:980px;margin:0 auto;padding:16px 16px 80px}
+.hero{text-align:center;padding:10px 0 4px}
+.hero h2{font-family:"Playfair Display",Georgia,serif;font-size:26px;margin:0 0 4px;color:var(--pri)}
+.hero p{margin:0;color:var(--muted);font-size:14px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:12px 0 4px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:8px 16px;font-weight:600;font-size:14px;color:var(--muted);cursor:pointer;min-height:40px}
+.chip[aria-pressed="true"]{background:var(--pri);border-color:var(--pri);color:#fff3d6}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:12px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 2px 10px rgba(120,60,20,.07);text-align:left;padding:0}
+.pc .im{position:relative;aspect-ratio:9/16;background:#222}
+.pc img{width:100%;height:100%;object-fit:cover;display:block}
+.play{position:absolute;left:50%;top:50%;width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;background:rgba(0,0,0,.5);display:grid;place-items:center}
+.play:after{content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.pc .tx{padding:10px 12px 12px}
+.pc b{display:block;font-size:14px;line-height:1.3}
+.pc small{display:block;color:var(--muted);font-size:12px;margin:2px 0 6px}
+.price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.price strong{font-size:20px;color:#d6336c}
+.price s{color:var(--muted);font-size:13px}
+.off{background:#e6f6ec;color:#177a3c;border-radius:99px;font-size:11px;font-weight:700;padding:2px 8px}
+.empty{text-align:center;color:var(--muted);padding:40px 0}
+.back{background:none;border:0;color:var(--pri);font-weight:600;font-size:15px;padding:8px 0;cursor:pointer}
+.det{display:grid;gap:18px}
+@media(min-width:760px){.det{grid-template-columns:minmax(0,380px) minmax(0,1fr);align-items:start}}
+.vf{background:#ffe3ea;border-radius:26px;padding:14px}
+.vf video{display:block;width:100%;max-height:78vh;border-radius:14px;background:#000;margin:0 auto}
+.det h2{font-family:"Playfair Display",Georgia,serif;font-size:26px;margin:0 0 2px}
+.det .tags{color:var(--muted);font-size:14px;margin-bottom:8px}
+.det .price strong{font-size:32px}
+.note{color:var(--muted);font-size:14px;margin:4px 0 12px}
+.steps{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 16px;margin:14px 0;font-size:14px}
+.steps b{color:var(--pri)}
+.steps ol{margin:6px 0 0;padding-left:20px}
+.btn{border:0;background:linear-gradient(135deg,#8b1a1a,#b3282d);color:#fff3d6;border-radius:14px;padding:14px 18px;font-weight:700;font-size:17px;min-height:52px;cursor:pointer;width:100%;box-shadow:0 4px 12px rgba(139,26,26,.3);display:block;text-align:center;text-decoration:none}
+.btn.wa{background:linear-gradient(135deg,#1fa855,#128c41);color:#fff}
+.btn.alt{background:#fff;color:var(--pri);border:1.5px solid var(--pri);box-shadow:none}
+.form{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;margin-top:14px}
+.form h3{margin:0 0 10px;font-size:17px;color:var(--pri)}
+.fld{display:block;margin-bottom:12px}
+.fld>span{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:4px}
+.fld input,.fld textarea{width:100%;min-width:0;border:1.5px solid var(--line);border-radius:12px;padding:11px 12px;min-height:46px;background:#fff}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px rgba(201,151,43,.25)}
+.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.gap{display:grid;gap:10px;margin-top:6px}
+.err{color:#b3261e;font-size:13px;margin:6px 0 0}
+footer{text-align:center;color:var(--muted);font-size:12.5px;padding:20px 16px 40px}
+</style>
+</head>
+<body>
+<header><h1 id="shop"></h1><a class="wab" id="hwa" target="_blank" rel="noopener">WhatsApp us</a></header>
+<div class="wrap">
+  <section id="list">
+    <div class="hero"><h2>Video Invitations</h2><p>Choose a design. Send us your details. Get your video on WhatsApp.</p></div>
+    <div class="chips" id="fo"></div>
+    <div class="chips" id="fr"></div>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="none" hidden>No designs in this category yet.</div>
+  </section>
+  <section id="detail" hidden>
+    <button class="back" id="back" type="button">← All designs</button>
+    <div class="det">
+      <div class="vf"><video id="vid" controls playsinline preload="metadata"></video></div>
+      <div>
+        <h2 id="dt"></h2><div class="tags" id="dg"></div>
+        <div class="price" id="dp"></div>
+        <p class="note">One-time payment · No subscription</p>
+        <p id="dd" class="note"></p>
+        <div class="steps"><b>How it works</b><ol><li>Tap “Order now” and fill your details.</li><li>Pay and send us the order on WhatsApp.</li><li id="dlv"></li></ol></div>
+        <button class="btn" id="order" type="button">Order now</button>
+        <div class="form" id="form" hidden>
+          <h3>Your details</h3>
+          <div class="row2">
+            <label class="fld"><span id="l1"></span><input id="n1" maxlength="30"></label>
+            <label class="fld" id="w2"><span id="l2"></span><input id="n2" maxlength="30"></label>
+          </div>
+          <label class="fld" id="wf1"><span id="lf1"></span><input id="f1" maxlength="60" placeholder="Optional"></label>
+          <label class="fld" id="wf2"><span id="lf2"></span><input id="f2" maxlength="60" placeholder="Optional"></label>
+          <label class="fld" id="wage"><span id="lage"></span><input id="age" inputmode="numeric" maxlength="3" placeholder="Optional"></label>
+          <div class="row2">
+            <label class="fld"><span>Date *</span><input id="dte" type="date"></label>
+            <label class="fld"><span>Time</span><input id="tme" type="time" value="19:00"></label>
+          </div>
+          <label class="fld"><span>Venue name</span><input id="ven" maxlength="60"></label>
+          <label class="fld"><span>Address</span><input id="adr" maxlength="120"></label>
+          <label class="fld"><span>Message on the video (optional)</span><textarea id="msg" rows="2" maxlength="120"></textarea></label>
+          <label class="fld"><span>Your WhatsApp number *</span><input id="ph" inputmode="tel" maxlength="14" placeholder="9876543210"></label>
+          <label class="fld"><span>Anything else? (language, changes)</span><textarea id="nts" rows="2" maxlength="200"></textarea></label>
+          <p class="err" id="err" hidden></p>
+          <div class="gap">
+            <a class="btn alt" id="upi" hidden>1. Pay with UPI</a>
+            <button class="btn wa" id="send" type="button">Send order on WhatsApp</button>
+          </div>
+          <p class="note" id="after"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<footer id="foot"></footer>
+<script>
+(function () {
+"use strict";
+var SHOP = {"name":"My Invitation cards","wa":"9211419444","upi":"9211419444@ptaxis","upiName":"Manmeet Kumar Gulia","delivery":"24 hours","products":[{"id":"c1795339488729","title":"Ring Ceremony Video Invitation","rel":"Hindu","lang":"English","occ":"eng","price":99,"mrp":299,"desc":"","video":"c1795339488729.mp4","thumb":"c1795339488729.jpg"}]};
+var $ = function (s) { return document.querySelector(s); };
+function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
+function clean(s, n) { return String(s == null ? "" : s).replace(/[\u0000-\u001f<>]/g, " ").replace(/\s+/g, " ").trim().slice(0, n || 120); }
+function digits(s) { var d = String(s || "").replace(/\D/g, ""); if (d.length === 10) d = "91" + d; return d; }
+var OCC = { wed: "Wedding", eng: "Ring Ceremony", bday: "Birthday", anniv: "Anniversary", baby: "Baby Shower", house: "Housewarming" };
+var LAB = { wed: ["Bride's name *", "Groom's name", "Bride's family", "Groom's family"], eng: ["Bride's name *", "Groom's name", "Bride's family", "Groom's family"], anniv: ["Husband's name *", "Wife's name", "Hosted by", ""], baby: ["Mother-to-be *", "Father-to-be", "Hosted by", ""], bday: ["Name *", "", "Hosted by", ""], house: ["Family / host name *", "", "Hosted by", ""] };
+var P = SHOP.products || [], fo = "All", fr = "All", cur = null, wa = digits(SHOP.wa);
+document.title = SHOP.name + " · Video Invitations";
+$("#shop").textContent = SHOP.name; $("#shop").onclick = function () { location.hash = ""; };
+$("#hwa").href = wa ? "https://wa.me/" + wa + "?text=" + encodeURIComponent("Hello! I want a video invitation.") : "#"; if (!wa) $("#hwa").hidden = true;
+$("#foot").textContent = SHOP.name + " · Video invitations delivered on WhatsApp";
+function off(p) { return p.mrp > p.price ? Math.round((1 - p.price / p.mrp) * 100) : 0; }
+function priceRow(box, p) { box.innerHTML = ""; box.appendChild(el("strong", "", "₹" + p.price)); if (p.mrp > p.price) { box.appendChild(el("s", "", "₹" + p.mrp)); box.appendChild(el("span", "off", off(p) + "% OFF")); } }
+function uniq(k) { var o = []; P.forEach(function (p) { var v = k === "occ" ? OCC[p.occ] : p[k]; if (v && o.indexOf(v) < 0) o.push(v); }); return o; }
+function chips(box, vals, get, set) { box.innerHTML = ""; if (vals.length < 1) { return; } ["All"].concat(vals).forEach(function (v) { var b = el("button", "chip", v); b.type = "button"; b.setAttribute("aria-pressed", String(get() === v)); b.onclick = function () { set(v); renderList(); }; box.appendChild(b); }); }
+function renderList() {
+  chips($("#fo"), uniq("occ"), function () { return fo; }, function (v) { fo = v; });
+  chips($("#fr"), uniq("rel"), function () { return fr; }, function (v) { fr = v; });
+  var g = $("#grid"); g.innerHTML = ""; var n = 0;
+  P.forEach(function (p) {
+    if ((fo !== "All" && OCC[p.occ] !== fo) || (fr !== "All" && p.rel !== fr)) return; n++;
+    var c = el("button", "pc"); c.type = "button"; var im = el("div", "im"), i = el("img"); i.src = p.thumb; i.alt = clean(p.title, 80); i.loading = "lazy"; im.appendChild(i); im.appendChild(el("div", "play")); c.appendChild(im);
+    var t = el("div", "tx"); t.appendChild(el("b", "", p.title)); t.appendChild(el("small", "", [p.rel, p.lang, OCC[p.occ]].filter(Boolean).join(" · "))); var pr = el("div", "price"); priceRow(pr, p); t.appendChild(pr); c.appendChild(t);
+    c.onclick = function () { location.hash = "#" + encodeURIComponent(p.id); }; g.appendChild(c);
+  });
+  $("#none").hidden = n > 0;
+}
+function show(p) {
+  cur = p; $("#list").hidden = true; $("#detail").hidden = false; $("#form").hidden = true; $("#order").hidden = false; $("#err").hidden = true; window.scrollTo(0, 0);
+  $("#dt").textContent = p.title; $("#dg").textContent = [p.rel, p.lang, OCC[p.occ]].filter(Boolean).join(" · "); priceRow($("#dp"), p); $("#dd").textContent = p.desc || "";
+  $("#dlv").textContent = "We make your video and send it on WhatsApp within " + (SHOP.delivery || "24 hours") + ".";
+  var v = $("#vid"); v.poster = p.thumb; v.src = p.video;
+  var L = LAB[p.occ] || LAB.wed, two = !!L[1];
+  $("#l1").textContent = L[0]; $("#l2").textContent = L[1]; $("#w2").hidden = !two; $("#lf1").textContent = L[2]; $("#lf2").textContent = L[3]; $("#wf2").hidden = !L[3];
+  $("#wage").hidden = !(p.occ === "bday" || p.occ === "anniv"); $("#lage").textContent = p.occ === "bday" ? "Turning age" : "Number of years";
+  $("#after").textContent = SHOP.upi ? "After paying, send the payment screenshot on WhatsApp with your order." : "We will share payment details when we get your order.";
+  var u = $("#upi"); u.hidden = !SHOP.upi; if (SHOP.upi) u.href = "upi://pay?pa=" + encodeURIComponent(SHOP.upi) + "&pn=" + encodeURIComponent(SHOP.upiName || SHOP.name) + "&am=" + p.price + "&cu=INR&tn=" + encodeURIComponent("Video invitation " + p.title.slice(0, 40));
+}
+function route() {
+  var id = decodeURIComponent((location.hash || "").slice(1)), p = P.filter(function (x) { return x.id === id; })[0];
+  if (p) show(p); else { var v = $("#vid"); try { v.pause(); } catch (e) {} v.removeAttribute("src"); $("#detail").hidden = true; $("#list").hidden = false; cur = null; }
+}
+window.addEventListener("hashchange", route);
+$("#back").onclick = function () { location.hash = ""; };
+$("#order").onclick = function () { $("#form").hidden = false; $("#order").hidden = true; $("#form").scrollIntoView({ behavior: "smooth", block: "start" }); };
+$("#send").onclick = function () {
+  var e = $("#err"), n1 = clean($("#n1").value, 30), d = $("#dte").value, ph = digits($("#ph").value);
+  if (!n1) { e.textContent = "Please enter the name."; e.hidden = false; return; }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(d)) { e.textContent = "Please choose the event date."; e.hidden = false; return; }
+  if (ph.length < 11) { e.textContent = "Please enter your 10 digit WhatsApp number."; e.hidden = false; return; }
+  e.hidden = true;
+  var L = [["*New video invitation order*", ""], ["Card", cur.title], ["Template ID", cur.id], ["Price", "₹" + cur.price], ["Name 1", n1], ["Name 2", clean($("#n2").value, 30)], ["Family 1", clean($("#f1").value, 60)], ["Family 2", clean($("#f2").value, 60)], ["Age/Years", clean($("#age").value, 3).replace(/\D/g, "")], ["Date", d], ["Time", $("#tme").value], ["Venue", clean($("#ven").value, 60)], ["Address", clean($("#adr").value, 120)], ["Message", clean($("#msg").value, 120)], ["Customer phone", ph], ["Notes", clean($("#nts").value, 200)]];
+  var txt = L.filter(function (r) { return r[1] || !r[0].indexOf("*"); }).map(function (r) { return r[1] ? r[0] + ": " + r[1] : r[0]; }).join("\n");
+  if (!wa) { alert("Shop WhatsApp number is not set."); return; }
+  window.open("https://wa.me/" + wa + "?text=" + encodeURIComponent(txt), "_blank");
+};
+renderList(); route();
+})();
+</script>
+</body>
+</html>
